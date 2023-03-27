@@ -1,5 +1,6 @@
 import styles from './ContactList.module.css';
 import propTypes from 'prop-types';
+
 const ContactList = ({ items, removeContact }) => {
   const elements = items.map(({ name, number, id }) => {
     return (

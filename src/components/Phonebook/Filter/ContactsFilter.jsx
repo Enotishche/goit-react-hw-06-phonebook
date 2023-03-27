@@ -13,6 +13,7 @@ const ContactsFilter = ({ filter, onChange }) => {
         className={styles.filter}
         placeholder="Filter"
       />
+      {/* {console.log(filter)} */}
     </div>
   );
 };
