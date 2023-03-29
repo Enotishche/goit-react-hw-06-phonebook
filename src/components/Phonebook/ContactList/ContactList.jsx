@@ -1,5 +1,4 @@
 import styles from './ContactList.module.css';
-import propTypes from 'prop-types';
 
 const ContactList = ({ items, removeContact }) => {
   const elements = items.map(({ name, number, id }) => {
@@ -22,17 +21,4 @@ const ContactList = ({ items, removeContact }) => {
   );
 };
 
-ContactList.defaultProps = {
-  items: [],
-};
-ContactList.propTypes = {
-  removeContact: propTypes.func.isRequired,
-  items: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string.isRequired,
-      name: propTypes.string.isRequired,
-      number: propTypes.string.isRequired,
-    })
-  ),
-};
 export default ContactList;
