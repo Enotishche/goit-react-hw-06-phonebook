@@ -28,6 +28,12 @@ const FormAddContact = () => {
     }
   };
 
+  // const handleChange = e => {
+  //   console.log(e);
+  //   const { name, value } = e.currentTarget;
+  //   setState(prevState => ({ ...prevState, [name]: value }));
+  // };
+
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -38,6 +44,7 @@ const FormAddContact = () => {
     ) {
       return alert(`${name} and ${number} is already in contacts list.`);
     } else {
+      // dispatch(addContact(state));
       dispatch(addContact({ id: nanoid(), name, number }));
     }
     setName('');
